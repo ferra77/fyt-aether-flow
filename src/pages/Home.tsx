@@ -34,10 +34,10 @@ const Home = () => {
   ];
 
   const motivationalQuotes = [
-    "Every workout counts 💪",
-    "You're stronger than yesterday ⚡",
-    "Progress, not perfection ✨",
-    "Your only limit is you 🚀"
+    "Every workout counts",
+    "You're stronger than yesterday", 
+    "Progress, not perfection",
+    "Your only limit is you"
   ];
 
   const [currentQuote] = useState(motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)]);
@@ -113,7 +113,9 @@ const Home = () => {
                 <div className="text-sm text-muted-foreground">15 min HIIT</div>
               </div>
             </div>
-            <div className="text-2xl">🔥</div>
+            <div className="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+            </div>
           </button>
 
           <button className="w-full glass-card p-4 flex items-center justify-between hover:bg-white/10 transition-all duration-300">
@@ -126,7 +128,9 @@ const Home = () => {
                 <div className="text-sm text-muted-foreground">10 min relaxation</div>
               </div>
             </div>
-            <div className="text-2xl">🧘‍♀️</div>
+            <div className="w-8 h-8 bg-gradient-to-r from-secondary to-accent rounded-full flex items-center justify-center">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+            </div>
           </button>
         </div>
       </div>

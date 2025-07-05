@@ -14,12 +14,12 @@ const Profile = () => {
   });
 
   const achievements = [
-    { emoji: '🔥', title: 'Week Warrior', description: '7-day streak' },
-    { emoji: '💪', title: 'Strength Master', description: '50 strength workouts' },
-    { emoji: '⚡', title: 'Speed Demon', description: '100 cardio sessions' },
-    { emoji: '🧘‍♀️', title: 'Zen Master', description: '30 yoga sessions' },
-    { emoji: '🎯', title: 'Goal Crusher', description: 'Monthly target hit' },
-    { emoji: '⭐', title: 'Rising Star', description: 'Top 10% this month' },
+    { icon: Star, title: 'Week Warrior', description: '7-day streak', gradient: 'from-primary to-secondary' },
+    { icon: Activity, title: 'Strength Master', description: '50 strength workouts', gradient: 'from-secondary to-primary' },
+    { icon: Timer, title: 'Speed Demon', description: '100 cardio sessions', gradient: 'from-primary to-accent' },
+    { icon: Heart, title: 'Zen Master', description: '30 yoga sessions', gradient: 'from-accent to-secondary' },
+    { icon: Star, title: 'Goal Crusher', description: 'Monthly target hit', gradient: 'from-secondary to-accent' },
+    { icon: Activity, title: 'Rising Star', description: 'Top 10% this month', gradient: 'from-primary to-secondary' },
   ];
 
   const stats = [
@@ -88,9 +88,11 @@ const Profile = () => {
       <div className="mb-8">
         <h2 className="text-xl font-bold mb-4 text-foreground">Achievements</h2>
         <div className="grid grid-cols-2 gap-3">
-          {achievements.map(({ emoji, title, description }) => (
-            <div key={title} className="glass-card p-4 text-center hover:bg-white/10 transition-all duration-300">
-              <div className="text-3xl mb-2">{emoji}</div>
+          {achievements.map(({ icon: Icon, title, description, gradient }) => (
+            <div key={title} className="glass-card p-4 text-center hover:bg-white/10 transition-all duration-300 group">
+              <div className={`w-12 h-12 bg-gradient-to-r ${gradient} rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
+                <Icon size={20} className="text-white" />
+              </div>
               <div className="text-sm font-semibold text-foreground mb-1">{title}</div>
               <div className="text-xs text-muted-foreground">{description}</div>
             </div>

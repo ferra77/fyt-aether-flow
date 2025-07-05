@@ -84,12 +84,12 @@ const WorkoutTimer = () => {
         {/* Motivational Text */}
         <div className="mb-8 text-center">
           <h2 className="text-2xl font-bold text-foreground mb-2">
-            {isWorkout ? "You've Got This! 💪" : "Recovery Time 🌟"}
+            {isWorkout ? "Push Your Limits" : "Recovery Phase"}
           </h2>
           <p className="text-muted-foreground">
             {isWorkout 
-              ? "Every second counts. Keep pushing forward!"
-              : "Rest well to perform better. You're doing amazing!"
+              ? "Every second counts. Keep pushing forward."
+              : "Rest well to perform better. You're doing amazing."
             }
           </p>
         </div>

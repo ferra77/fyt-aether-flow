@@ -18,7 +18,7 @@ const Explore = () => {
       duration: '15 min',
       difficulty: 'Beginner',
       category: 'cardio',
-      emoji: '☀️',
+      icon: Heart,
       description: 'Start your day with high energy',
       color: 'bg-gradient-to-r from-primary to-secondary'
     },
@@ -28,7 +28,7 @@ const Explore = () => {
       duration: '30 min',
       difficulty: 'Intermediate',
       category: 'strength',
-      emoji: '💪',
+      icon: Activity,
       description: 'Build lean muscle and strength',
       color: 'bg-gradient-to-r from-secondary to-primary'
     },
@@ -38,7 +38,7 @@ const Explore = () => {
       duration: '20 min',
       difficulty: 'Beginner',
       category: 'yoga',
-      emoji: '🧘‍♀️',
+      icon: Timer,
       description: 'Relax and restore your body',
       color: 'bg-gradient-to-r from-accent to-primary'
     },
@@ -48,7 +48,7 @@ const Explore = () => {
       duration: '12 min',
       difficulty: 'Advanced',
       category: 'cardio',
-      emoji: '🔥',
+      icon: Star,
       description: 'High intensity interval training',
       color: 'bg-gradient-to-r from-primary to-accent'
     }
@@ -99,7 +99,9 @@ const Explore = () => {
               <h3 className="text-xl font-bold text-foreground">Power Hour Challenge</h3>
               <p className="text-muted-foreground">Complete workout series</p>
             </div>
-            <div className="text-4xl animate-bounce">⚡</div>
+            <div className="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-2xl flex items-center justify-center animate-pulse-glow">
+              <Star size={28} className="text-white" />
+            </div>
           </div>
           <div className="flex items-center justify-between">
             <div className="flex space-x-4">
@@ -128,8 +130,8 @@ const Explore = () => {
           >
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center space-x-4">
-                <div className={`w-16 h-16 ${workout.color} rounded-2xl flex items-center justify-center text-2xl`}>
-                  {workout.emoji}
+                <div className={`w-16 h-16 ${workout.color} rounded-2xl flex items-center justify-center shadow-lg`}>
+                  <workout.icon size={28} className="text-white" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-foreground">{workout.title}</h3>
